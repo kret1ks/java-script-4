@@ -53,3 +53,13 @@
 let name = prompt("Введіть ім'я:");
 let email = prompt("Введіть email:");
 let password = prompt("Введіть пароль:");
+
+const isNameValid = name.length >= 3;
+const isEmailValid = email.includes("@") && email.indexOf(".") > email.indexOf("@");
+const isPasswordValid = password.length >= 6;
+
+if (isNameValid && isEmailValid && isPasswordValid) {
+    console.log("Перенаправлення на іншу сторінку");
+} else {
+    console.log("Помилка: неправильне заповнення");
+}
